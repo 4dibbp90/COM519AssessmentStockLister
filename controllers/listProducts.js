@@ -22,9 +22,15 @@ exports.list = async (req, res) => {
     }
   };
 
-exports.create =  async (req, res) =>{
-   let product = new product({productid: req.body.productid, name: req.body.name, description: PermissionRequest.body.description, brand: req.body.brand, colour: req.body.colour, price: req.body.price, quantity: req.body.quantity});
-   await product.save();
-   res.redirect('/listProducts')
-}
-  
+  exports.create =  async (req, res) =>{
+    try{
+    const products = new products({productid: req.body.productid, name: req.body.name, description: req.body.description, brand: req.body.brand, colour: req.body.colour, price: req.body.price, quantity: req.body.quantity});
+    
+    await products.save();
+    res.redirect('/listProducts')
+    }catch (e) {
+      return res.status(400).send({
+      message: JSON.parse(e),
+    });
+  }
+  }

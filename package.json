@@ -1,8 +1,9 @@
 {
-  "name": "stockLister",
+  "name": "COM519AssessmentStockLister",
   "version": "1.0.0",
   "main": "app.js",
   "dependencies": {
+    "body-parser": "^1.19.0",
     "bootstrap": "^5.0.0-beta1",
     "dotenv": "^8.2.0",
     "ejs": "^3.1.5",
