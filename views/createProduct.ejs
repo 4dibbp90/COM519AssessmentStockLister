@@ -7,29 +7,29 @@
 </head>
 <body>
     <%- include ("common/Header"); -%>
-    <h1>ad a new product to the database</h1>
+    <h1>add a new product to the database</h1>
     <form method="POST", action="/createProduct">
     <p>Product ID</p>
-    <input type="number"  id="productid" name="productid"></input>
+    <input type="number"  id="productid" name="productid" value="<%=product.productid%>">
 
     <p>Name</p>
-    <input type="text"  id="name"  name="name"></input>
+    <input type="text"  id="name"  name="name" value="<%=product.name%>">>
 
     <p>Description</p>
-    <input type="text" " id="description" name="description"></input>
+    <input type="text"  id="description" name="description" value="<%=product.description%>">">
 
     <p>brand</p>
-    <input type="text"  id="brand" name="brand"></input>
+    <input type="text"  id="brand" name="brand" value="<%=product.brand%>">>
 
     <p>colour</p>
-    <input type="text"  id="colour" name="colour"></input>
+    <input type="text"  id="colour" name="colour"value="<%=product.colour%>">>
 
     <p>price</p>
-    <input type="number"  id="price" name="price"></input>
+    <input type="number"  id="price" name="price" value="<%=product.price%>">>
 
     
     <p>quantity</p>
-    <input type="number"  id="quantity" name="quantity"></input>
+    <input type="number"  id="quantity" name="quantity" value="<%=product.quantity%>">>
     
     <button type="submit">add product</button>
 

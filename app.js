@@ -31,10 +31,15 @@ const dataController = require("./controllers/listProducts");
 app.get("/listProducts", dataController.list);
 app.get("/listProducts/delete/:id", dataController.delete);
 
+
 app.get("/createProduct", (req, res) => {res.render ("createProduct")});
 app.post("/createProduct", dataController.create);
-//app.get("/createProduct/create", dataController.create);
+app.get("/createProduct/create", dataController.create);
 
+app.get("/listProducts/get/:id", dataController.get);
+app.get("/modifyProduct/get/:id", dataController.get);
+app.post("/modifyProduct/modify/:id", dataController.modify);
+app.post("/modifyProduct", dataController.modify);
 
 
 mongoose.connection.on("error", (err) => {
