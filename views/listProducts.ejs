@@ -13,12 +13,13 @@
       
            
                  
-            <table style= "width: 99%">
+            <table style= "width: 90%">
            <tr>
                 <th>productid</th><th>name</th><th>description</th><th>brand</th><th>colour</th><th>price</th><th>quantity</th>
             </tr>
               <% list.forEach(function(list){ %>  
             <tr>    
+          
             <td><%=  list.productid  %></td><td><%=  list.name  %></td><td><%=  list.description  %></td><td><%=  list.brand  %></td><td><%=  list.colour  %></td><td><%=  list.price  %></td><td><%=  list.quantity  %></td>
             <td>  <a href="/listProducts/get/<%= list.id %>"> modify </a> </button>   </td> 
             <td>  <a href="/listProducts/delete/<%= list.id %>"> delete </a> </button>   </td> 
@@ -30,14 +31,16 @@
     <hr>
     <p3> <a href="createProduct">create product</a></p3>
     
+
   
   
  </body>
  </html>
 <style>
    p3{text-align: right;}
-   table{align-self: center;
-    border: 1px; color: black;}
+   table tr td {align-self: center;
+    border-collapse: collapse; border: 1px; border-style: solid; color: black;}
+    
 </style>
 
 

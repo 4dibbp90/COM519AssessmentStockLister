@@ -8,8 +8,15 @@ const products = require("../models/ListProducts");
     } catch (e) {
       res.status(404).send({ message: "could not list products" });
     }
-  };
+  } 
 
+  exports.instocklist = async (req, res) => {
+    
+      const list = await products.find({ "quantity": { $gt: 0 } });
+      res.render("inStock", { list: list});
+      
+   
+  };
   exports.delete = async (req, res) => {
     const id = req.params.id;
     try {
@@ -51,7 +58,8 @@ const products = require("../models/ListProducts");
   exports.modify = async (req, res) =>{
   const id = req.params.id;
   try{
-  const product = await products.updateOne({ id: id }, req.body);
+  //const product = await products.updateOne({ id: id }, req.body);
+  const product = await products.updateOne({ id: id }, {productid: req.body.productid, name: req.body.name, description: req.body.description, brand: req.body.brand, colour: req.body.colour, price: req.body.price, quantity: req.body.quantity});
   res.redirect('/listProducts/');
 } catch (e) {
   res.status(404).send({
@@ -59,3 +67,8 @@ const products = require("../models/ListProducts");
   });
 }
 };
+
+
+
+
+

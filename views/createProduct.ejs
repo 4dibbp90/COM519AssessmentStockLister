@@ -10,26 +10,26 @@
     <h1>add a new product to the database</h1>
     <form method="POST", action="/createProduct">
     <p>Product ID</p>
-    <input type="number"  id="productid" name="productid" value="<%=product.productid%>">
+    <input type="number"  id="productid" name="productid"  required >
 
     <p>Name</p>
-    <input type="text"  id="name"  name="name" value="<%=product.name%>">>
+    <input type="text"  id="name"  name="name" >
 
     <p>Description</p>
-    <input type="text"  id="description" name="description" value="<%=product.description%>">">
+    <input type="text"  id="description" name="description" >
 
     <p>brand</p>
-    <input type="text"  id="brand" name="brand" value="<%=product.brand%>">>
+    <input type="text"  id="brand" name="brand">
 
     <p>colour</p>
-    <input type="text"  id="colour" name="colour"value="<%=product.colour%>">>
+    <input type="text"  id="colour" name="colour">
 
     <p>price</p>
-    <input type="number"  id="price" name="price" value="<%=product.price%>">>
+    <input type="number"  id="price" name="price" >
 
     
     <p>quantity</p>
-    <input type="number"  id="quantity" name="quantity" value="<%=product.quantity%>">>
+    <input type="number"  id="quantity" name="quantity" >
     
     <button type="submit">add product</button>
 
