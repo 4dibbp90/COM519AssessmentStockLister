@@ -33,13 +33,13 @@ app.get("/listProducts", dataController.list);
 app.get("/listProducts/delete/:id", dataController.delete);
 app.get("/inStock", dataController.instocklist);
 app.get("/inStock/delete/:id", dataController.delete);
+app.get("/inStock/get/:id", dataController.instocklist);
+app.get("/listProducts/get/:id", dataController.get);
 
 app.get("/createProduct", (req, res) => {res.render ("createProduct")});
 app.post("/createProduct", dataController.create);
 app.get("/createProduct/create", dataController.create);
 
-app.get("/listProducts/get/:id", dataController.get);
-app.get("/inStock/get/:id", dataController.instocklist);
 
 app.get("/modifyProduct/get/:id", dataController.get);
 app.post("/modifyProduct/modify/:id", dataController.modify);
