@@ -1,6 +1,6 @@
 const products = require("../models/ListProducts");
 
-
+// list1
   exports.list = async (req, res) => {
     try {
       const list = await products.find({});
@@ -10,12 +10,13 @@ const products = require("../models/ListProducts");
     }
   } 
 
+  //in stock list
   exports.instocklist = async (req, res) => {
     
       const list = await products.find({ "quantity": { $gt: 0 } });
       res.render("inStock", { list: list});
       
-   
+   //delete
   };
   exports.delete = async (req, res) => {
     const id = req.params.id;
