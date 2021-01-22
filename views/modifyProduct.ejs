@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <%- include ("common/Header"); -%>
+    <h1>Modify and update a product</h1>
+    <form method="POST", action="/modifyProduct">
+    
+    <input type="text" id="id" name="id" value="<%=id%>" readonly>
+
+    
+    <p>Product ID</p>
+    <input type="number"  id="productid" name="productid" value="<%=product.productid%>" required>
+
+    <p>Name</p>
+    <input type="text"  id="name"  name="name" value="<%=product.name %>" required >
+
+    <p>Description</p>
+    <input type="text"  id="description" name="description" value="<%=product.description%>">
+
+    <p>brand</p>
+    <input type="text"  id="brand" name="brand" value="<%=product.brand%>">
+
+    <p>colour</p>
+    <input type="text"  id="colour" name="colour" value="<%=product.colour%>">
+
+    <p>price</p>
+    <input type="number"  id="price" name="price" value="<%=product.price%>"> 
+
+    
+    <p>quantity</p>
+    <input type="number"  id="quantity" name="quantity" value="<%=product.quantity%>" required>
+    
+    <p><button type="submit">Modifyproduct</button></p>
+    </form>
+
+
+    <a href="/listProducts/delete/<%= product.id %>"> delete </a> 
+
+
+    
+
+
+
+
+    
+
+
+    
+
+
+
+
+</body>
+
+</html>

@@ -1,0 +1,74 @@
+[
+ {
+   "productid": 1,
+   "name": "Dark Blue Cotton Checked Regular Fit Shirt",
+   "description": "Ben Sherman Dark Blue Cotton Checked Regular Fit Shirt",
+   "brand": "Ben Sherman",
+   "colour": "blue",
+   "price": 12,
+   "quantity": 13
+ },
+ {
+   "productid": 2,
+   "name": "Navy Check  Long Sleeve Regular Fit Shirt",
+   "description": "Navy Window Pane Check Cotton Long Sleeve Regular Fit Shirt",
+   "brand": "",
+   "colour": "navy",
+   "price": 15,
+   "quantity": 12
+ },
+ {
+   "productid": 3,
+   "name": "Wine Cotton Checked Regular Fit Shirt",
+   "description": "Red Herring Wine Cotton Checked Regular Fit Shirt",
+   "brand": "Red Herring",
+   "colour": "red",
+   "price": 11,
+   "quantity": 9
+ },
+ {
+   "productid": 4,
+   "name": "Short Sleeves Checked Shirt",
+   "description": "Regatta Deakin III Short Sleeves Checked Shirt",
+   "brand": "Regatta",
+   "colour": "white",
+   "price": 6,
+   "quantity": 4
+ },
+ {
+   "productid": 5,
+   "name": "Blue Kiwi Long Sleeved Shirt",
+   "description": "Craghoppers Blue Kiwi Long Sleeved Shirt",
+   "brand": "Craghoppers",
+   "colour": "blue",
+   "price": 17,
+   "quantity": 17
+ },
+ {
+   "productid": 6,
+   "name": "blue long sleeve shirt",
+   "description": "Blue Organic Cotton Garment Dye Plain Long Sleeve Shirt",
+   "brand": "Mantaray",
+   "colour": "light blue",
+   "price": 10,
+   "quantity": 0
+ },
+ {
+   "productid": 7,
+   "name": "Long Sleeve Stretch Shirt",
+   "description": "Long Sleeve Stretch Shirt",
+   "brand": "next",
+   "colour": "dark blue",
+   "price": 9,
+   "quantity": 20
+ },
+ {
+   "productid": 8,
+   "name": "long sleeve white shirt",
+   "description": "long sleeve formal white shirt",
+   "brand": "Regatta",
+   "colour": "white",
+   "price": 7,
+   "quantity": 30
+ }
+]
