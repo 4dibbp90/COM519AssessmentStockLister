@@ -3,9 +3,9 @@
 require("dotenv").config();
 const express = require("express");
 
-const port = 3000;
+//const port = 3000;
 const mongoose = require("mongoose");
-const { WEB_PORT, MONGODB_URI } = process.env;
+const { PORT, MONGODB_URI } = process.env;
 
 const app = express();
 app.set("view engine", "ejs");
@@ -16,7 +16,7 @@ app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({ extended: false }));  
 
 
-mongoose.connect('mongodb://127.0.0.1:27017/productlist', { useNewUrlParser: true });
+mongoose.connect(MONGODB_URI, { useNewUrlParser: true });
 console.log(process.env.PORT);
 //mongoose.connect(MONGODB_URI, { useNewUrlParser: true });
 
@@ -56,5 +56,5 @@ mongoose.connection.on("error", (err) => {
 
 
 app.listen(port, () =>{
-    console.log(`app listening at http://localhost:${port}`);
+    console.log(`app listening at http://localhost:${PORT}`);
 });
