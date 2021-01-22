@@ -9,11 +9,10 @@ const { PORT, MONGODB_URI } = process.env;
 
 const app = express();
 app.set("view engine", "ejs");
-app.get("/", (req, res) =>{
-res.render("index.ejs");});
+
 var bodyParser = require('body-parser')
 app.use(bodyParser.json());
-app.use(bodyParser.urlencoded({ extended: false }));  
+app.use(bodyParser.urlencoded({ extended: false }));
 
 
 mongoose.connect(MONGODB_URI, { useNewUrlParser: true });
@@ -26,7 +25,9 @@ console.log(process.env.PORT);
 
 //app.get("/inStock", (req, res) => {res.render ("inStock")});
 
-
+app.get("/", (req, res) => {
+  res.render("index");
+});
 
 const dataController = require("./controllers/listProducts");
 app.get("/listProducts", dataController.list);
@@ -36,7 +37,7 @@ app.get("/inStock/delete/:id", dataController.delete);
 app.get("/inStock/get/:id", dataController.instocklist);
 app.get("/listProducts/get/:id", dataController.get);
 
-app.get("/createProduct", (req, res) => {res.render ("createProduct")});
+app.get("/createProduct", (req, res) => { res.render("createProduct") });
 app.post("/createProduct", dataController.create);
 app.get("/createProduct/create", dataController.create);
 
@@ -55,6 +56,6 @@ mongoose.connection.on("error", (err) => {
 });
 
 
-app.listen(port, () =>{
-    console.log(`app listening at http://localhost:${PORT}`);
+app.listen(port, () => {
+  console.log(`app listening at http://localhost:${PORT}`);
 });
