@@ -56,6 +56,6 @@ mongoose.connection.on("error", (err) => {
 });
 
 
-app.listen(port, () => {
+app.listen(PORT, () => {
   console.log(`app listening at http://localhost:${PORT}`);
 });
