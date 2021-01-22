@@ -5,7 +5,7 @@ const loading = require("loading-cli");
 
 
 //const uri = "mongodb://localhost:27017/productList";
-const uri ="mongodb+srv://admin:admin@cluster0.rlyz7.mongodb.net/productlist?retryWrites=true&w=majority"
+const uri ="mongodb+srv://user:admin@cluster0.rlyz7.mongodb.net/productlist?retryWrites=true&w=majority"
 const client = new MongoClient(uri);
 
 async function main() {
